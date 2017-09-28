@@ -9,12 +9,7 @@ const expressValidator = require('express-validator');
 const methodOverride = require('method-override');
 const validator = require('validator');
 
-require('dotenv').config();
-const mongoConnection = process.env.MONGODB_URL;
-
-//const port = process.env.PORT;
 const port = 8080;
-
 
 
 app.use(cookieParser());
