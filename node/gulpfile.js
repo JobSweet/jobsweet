@@ -40,7 +40,7 @@ gulp.task('vendor.js', ()=> {
 
 gulp.task('default', ['app.js', 'vendor.js']);
 
-const appWatcher = gulp.watch(source.js.app, ['app,js']);
+const appWatcher = gulp.watch(source.js.app, ['app.js']);
 appWatcher.on('change', (event)=>{
     console.log(`File ${event.type} was ${event.type}, running tasks..`);
 });

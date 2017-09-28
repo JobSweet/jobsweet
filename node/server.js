@@ -7,23 +7,15 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const expressValidator = require('express-validator');
 const methodOverride = require('method-override');
-const mongoose = require('mongoose');
 const validator = require('validator');
 
 require('dotenv').config();
 const mongoConnection = process.env.MONGODB_URL;
-const port = process.env.PORT;
 
-mongoose.Promise = global.Promise;
-mongoose.connect(mongoConnection, {
-    useMongoClient: true
-});
-process.on('SIGINT', () => {
-    mongoose.connection.close(() => {
-        console.log('Mongoose default connection disconnected through app termination');
-        process.exit(0);
-    })
-});
+//const port = process.env.PORT;
+const port = 8080;
+
+
 
 app.use(cookieParser());
 app.use(bodyParser.json());
