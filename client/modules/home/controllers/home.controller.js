@@ -1,7 +1,7 @@
 (function () {
     'use strict'
 
-    angular.module('jobsweet.home')
+    angular.module('home')
         .controller('homeController', HomeController);
 
         HomeController.$inject = [];

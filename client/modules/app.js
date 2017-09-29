@@ -7,7 +7,7 @@
         , 'ngTouch'
      , 'ngSanitize'
      , 'ui.bootstrap'
-     ,'jobsweet.home'
+     ,'home'
     ])
         .config(RouteConfig);
 

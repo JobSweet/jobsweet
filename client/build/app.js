@@ -1,8 +1,3 @@
-(function () {
-    'use strict';
-
-    angular.bootstrap(document, ['jobsweet']);
-});
 (function (){
     'use strict'
 
@@ -12,7 +7,7 @@
         , 'ngTouch'
      , 'ngSanitize'
      , 'ui.bootstrap'
-     ,'jobsweet.home'
+     ,'home'
     ])
         .config(RouteConfig);
 
@@ -25,7 +20,7 @@
 (function () {
     'use strict'
 
-    angular.module('jobsweet.home', [
+    angular.module('home', [
         'ngAnimate'
         , 'ngSanitize'
         , 'ngTouch'
@@ -48,7 +43,7 @@
 (function () {
     'use strict'
 
-    angular.module('jobsweet.home')
+    angular.module('home')
         .controller('homeController', HomeController);
 
         HomeController.$inject = [];
