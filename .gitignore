@@ -1,3 +1,5 @@
 desktop.ini
 .vscode/
 node/node_modules
+obj
+bin
