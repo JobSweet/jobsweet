@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "app used to communicate company interview process for job seekers.",
   "main": "server.js",
-  "repository":{
-    "type":"git",
+  "repository": {
+    "type": "git",
     "url": "https://github.com/JobSweet/jobsweet.git"
   },
   "scripts": {
@@ -29,6 +29,7 @@
     "express-validator": "^3.2.1",
     "jquery": "^3.2.1",
     "method-override": "^2.3.9",
+    "q": "^1.5.1",
     "tether": "^1.4.0",
     "validator": "^8.0.0"
   },

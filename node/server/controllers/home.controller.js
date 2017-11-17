@@ -11,8 +11,8 @@ function homeController () {
             , insert: insert
     }
 
-    function getAll() {
-        homeService.getAll() 
+    function getAll(req, res) {
+         homeService.getAll() 
             .then((response)=>{
                 return res.json(response);            
             })
@@ -23,7 +23,7 @@ function homeController () {
 
     function insert(req, res) {
         homeService.insert(req.body)
-            .then((respose)=>{
+            .then((response)=>{
                 return res.status(201).json(response);
 
             })
@@ -31,5 +31,5 @@ function homeController () {
                 return res.status(500).send(err)
             })
     }
-}
+};
     

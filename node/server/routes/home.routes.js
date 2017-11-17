@@ -6,5 +6,5 @@ const homeController = require('../controllers/home.controller')();
 
 module.exports = router;
 
-router.post('/books', homeController.getAll);
-router.insert('/books', homeController.insert);
+router.get('/', homeController.getAll);
+router.post('/', homeController.insert);
