@@ -77,10 +77,6 @@ if (sessionStore === "mongo") {
 app.use(passport.initialize());
 app.use(passport.session());
 
-// cron jobs
-cronJobs.monthlyInvoices();
-//cronJobs.tenSecondTester();
-
 // routes ==================================================
 app.use(require('./app/routes'));
 
