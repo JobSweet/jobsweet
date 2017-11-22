@@ -1,10 +1,10 @@
 'use strict';
 
 const router = require('express').Router();
-const homeRoutes = require('./home.routes');
+const usersRoutes = require('./users.routes');
 const sitesRoutes = require('./sites.routes');
 
-router.use('/api/events', homeRoutes);
+router.use('/api/users', usersRoutes);
 router.use('/api/*', (req, res, next) => {
     res.sendStatus(404);
 })

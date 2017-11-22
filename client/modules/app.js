@@ -1,13 +1,13 @@
-(function (){
+(function () {
     'use strict'
 
     angular.module('jobsweet', [
         'ui.router'
         , 'ngAnimate'
         , 'ngTouch'
-     , 'ngSanitize'
-     , 'ui.bootstrap'
-     ,'home'
+        , 'ngSanitize'
+        , 'ui.bootstrap'
+        , 'users'
     ])
         .config(RouteConfig);
 

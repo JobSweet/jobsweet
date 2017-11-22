@@ -1,0 +1,21 @@
+{
+  "name": "jobsweet",
+  "description": "app used to communicate company interview process for job seekers.",
+  "main": "server.js",
+  "authors": [
+    "JobSweet Team"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/JobSweet/jobsweet",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "adaptive-placeholders": "^1.1.5"
+  }
+}

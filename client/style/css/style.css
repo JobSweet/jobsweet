@@ -1,0 +1,14 @@
+/* input:invalid {
+    background-color: #ffdddd;
+  }
+  input:valid {
+    background-color: #ddffdd;
+  }
+  
+  form:valid {
+    border: 5px solid #ddffdd;
+  }   */
+
+  .invalid-text{
+        color:red;
+  }

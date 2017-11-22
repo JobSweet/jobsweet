@@ -1,13 +1,13 @@
-(function (){
+(function () {
     'use strict'
 
     angular.module('jobsweet', [
         'ui.router'
         , 'ngAnimate'
         , 'ngTouch'
-     , 'ngSanitize'
-     , 'ui.bootstrap'
-     ,'home'
+        , 'ngSanitize'
+        , 'ui.bootstrap'
+        , 'users'
     ])
         .config(RouteConfig);
 
@@ -20,22 +20,22 @@
 (function () {
     'use strict'
 
-    angular.module('home', [
+    angular.module('users', [
         'ngAnimate'
         , 'ngSanitize'
         , 'ngTouch'
-             ,'ui.bootstrap'
-            , 'ui.router'
+        , 'ui.bootstrap'
+        , 'ui.router'
     ])
-    .config(RouteConfig);
+        .config(RouteConfig);
 
     RouteConfig.$inject = ['$stateProvider'];
     function RouteConfig($stateProvider) {
         $stateProvider
-            .state('home', {
-                url:'/home'
-                , templateUrl:'client/modules/home/views/home.html'
-                , controller: 'homeController as $ctrl'
+            .state('users', {
+                url: '/users'
+                , templateUrl: 'client/modules/users/views/users.html'
+                , controller: 'usersController as $ctrl'
             })
     }
 })();
@@ -43,12 +43,13 @@
 (function () {
     'use strict'
 
-    angular.module('home')
-        .controller('homeController', HomeController);
+    angular.module('users')
+        .controller('usersController', UsersController);
 
-        HomeController.$inject = [];
+    UsersController.$inject = ['$scope'];
 
-        function HomeController () {
-            const $ctrl = this;
-        }
+    function UsersController($scope) {
+        let $ctrl = this;
+        $ctrl.firstName ="dan";
+    }
 })();

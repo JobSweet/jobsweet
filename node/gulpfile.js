@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
+const sass = require('gulp-sass');
 
 
 const source = {
@@ -21,6 +22,7 @@ const source = {
          'node_modules/angular-touch/angular-touch.min.js',
          'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js'
         ]
+
     }
 }
 
@@ -38,7 +40,16 @@ gulp.task('vendor.js', ()=> {
         .pipe(gulp.dest(destination));
 })
 
-gulp.task('default', ['app.js', 'vendor.js']);
+gulp.task('sass',  ()=> {
+  return gulp.src('../client/style/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('../client/style/css'));
+});
+//gulp.task('default', ['app.js', 'vendor.js']);
+
+gulp.task('default',function() {
+    gulp.watch('../client/style/sass/**/*.scss',['sass']);
+});
 
 const appWatcher = gulp.watch(source.js.app, ['app.js']);
 appWatcher.on('change', (event)=>{
